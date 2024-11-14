@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">');
+
+:root {
+  --primary-color: #BEEFDA;
+  --secondary-color: #211951;
+  --third-color: #836FFF;
+  --body-color: #ffffff;
+  --body-color-alternative: #F0F3FF;
+
+  --main-font: 'Open Sans', sans-serif;
+  --heading-font: 'Rethink Sans', sans-serif;
+}
+
+* {
+  font-family: 'Rethink Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+
+html,
+body {
+  height: 100%;
+  /* Mengatur tinggi untuk html dan body agar mengisi seluruh layar */
+  margin: 0;
+  /* Menghilangkan margin default */
+  padding: 0;
+  /* Menghilangkan padding default */
+  display: flex;
+  /* Mengaktifkan flexbox */
+  flex-direction: column;
+  /* Mengatur arah elemen secara vertikal */
+  background-color: #f4f4f4
+}
+
+/* Pengaturan untuk html */
+html {
+  font-size: 100%;
+  /* Menetapkan ukuran font dasar */
+  overflow-x: hidden;
+  /* Menghindari horizontal overflow */
+  scroll-behavior: smooth;
+  /* Mengaktifkan scroll halus */
+  scroll-padding-top: 6rem;
+  /* Memberikan padding atas saat scroll ke elemen */
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 110px;
+}
+
+
+header {
+  position: fixed;
+  /* Membuat header tetap di tempat saat di-scroll */
+  top: 0;
+  /* Posisi dari atas */
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  color: var(--primary-color);
+  padding: 1em;
+  text-align: left;
+  padding-inline: 4rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  z-index: 1000;   /* Membuat header menjadi layer palng atas */
+}
+
+
+header .logo {
+  font-size: 2.0rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: medium;
+  /*-webkit-text-stroke: 1.5px var(--secondary-color); /* Outline warna hitam */
+  /*font-weight: bold; Opsional: menambahkan ketebalan*/
+}
+
+
+header nav a {
+  color: var(--secondary-color);
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--primary-color);
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  padding: 0.5em;
+  flex: 1;
+}
+
+aside {
+  margin-top: auto;
+  padding: 20px;
+  background-color: #fafafa;
+  text-align: center;
+  background-color: none;
+}
+
+aside img {
+  width: 20%;
+  border-radius: 50%;
+  align-items: center;
+}
+
+a{
+  color : #010101;
+  font-size: 25px;
+}
+
+article {
+  flex: 3;
+  background: #ffffff;
+  padding: 1em;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2em;
+}
+
+footer nav a {
+  color: #fff;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#profile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+.about {
+  display: flex; /* Menyusun elemen secara horizontal */
+  align-items: center;
+  justify-content: space-between; /* Menjaga jarak antar gambar dan teks */
+  /* margin-top: 100px; */
+  margin: 100px;
+}
+
+
+.about-image {
+  flex: 1 1 40rem; 
+}
+
+.about-image img {
+  padding: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+.about-content {
+  flex: 1 1 40rem; 
+  padding-left: 2rem; 
+}
+
+.about-content p {
+  color: #333;
+}
+
+.about-content h2 {
+  margin-bottom: 1rem; 
+  color : var(--secondary-color)
+}
+
+.about-content p {
+  margin-bottom: 1rem; 
+}
+
+.tools {
+  margin: 20px;
+}
+
+.tools p {
+  margin-top: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.tools h2 {
+ color : var(--secondary-color)
+}
+
+.tools .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Jarak antar box */
+  max-width: 1200px; /* Lebar maksimum container. 1200 agar item flex sampai memenuhi layar */
+  margin: 0 auto; /* Agar container berada di tengah */
+  padding: 0 1rem;  /* Ruang di sisi kiri dan kanan */
+}
+
+.tools .box-container .box {
+  flex: 1 1 calc(20% - 1.5rem);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  border: .1rem solid rgba(0, 0, 0, .3);
+  cursor: pointer;
+  border-radius: .5rem;
+  padding: 1rem;
+  min-height: 250px;
+  max-height: 250px;
+  height: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi untuk animasi */
+}
+
+.tools .box-container .box:hover {
+  transform: translateY(-10px); /* Menggerakkan box ke atas saat di-hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Mengubah bayangan untuk efek elevasi */
+}
+
+
+.tools .box-container .box .content img {
+  padding: 20px;
+  max-width: 100%;
+  height: auto;
+  max-height: 150px; /* Tinggi maksimal gambar */
+  width: auto; /* Menjaga proporsi lebar */
+  display: block;
+  margin: 0 auto;
+  object-fit: contain; /* Agar gambar full memenuhi card/box */
+}
+
+.tools .box-container .box .content h3 {
+  font-size: 1.5rem;  
+  color : var(--secondary-color);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.project{
+  margin: 20px;
+}
+
+.project p {
+  margin-top: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.project h2 {
+  color : var(--secondary-color)
+}
+.project .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.project .box-container .box {
+  flex: 1 1 calc(33.33% - 1.5rem); /* Ubah nilai 33.33% sesuai kebutuhan */
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  border: .1rem solid rgba(0, 0, 0, .3);
+  cursor: pointer;
+  border-radius: .5rem;
+  padding: 1rem;
+  height: auto; /* Sesuaikan tinggi elemen dengan konten */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project .box-container .box:hover {
+  transform: translateY(-10px); /* Menggerakkan box ke atas saat di-hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Mengubah bayangan untuk efek elevasi */
+  /* Kurang lebih sama seperti di section tools */
+}
+
+.project .box-container .box .content {
+  padding: 1rem; /* Menyesuaikan padding */
+  overflow: auto; /* Penngaturan agar isi konten bisa tetap terlihat walaupun ukuran card/box kurang memenuhi */
+}
+
+.project .box-container .box .content img {
+  padding: 20px;
+  max-width: 100%;
+  height: auto;
+  max-height: 300px; /* Tinggi maksimal */
+  width: auto; /* Menjaga proporsi lebar */
+  display: block;
+  margin: 0 auto;
+  object-fit: contain; /* Agar gambar full memenuhi card/box */
+  /* Kurang lebih sama seperti di section tools */
+}
+
+.project .box-container .box .content h3 {
+  font-size: 1.5rem;
+  color : var(--secondary-color);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.project .box-container .box .content p {
+  margin-top: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.profile h2{
+  color : var(--secondary-color)
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-inline: 2rem;
+  }
+
+
+  .about {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-image,
+  .about-content {
+    flex: 1 1 100%;
+  }
+
+  .tools .box-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .tools .box-container .box {
+    flex: 1 1 100%;
+  }
+}
+
+/* Media Query for Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    padding-top: 80px;
+  }
+
+  header {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about-image {
+    padding: 0;
+  }
+
+  .about-content {
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  .tools .box-container {
+    gap: 0.5rem;
+  }
+
+  .tools .box-container .box {
+    padding: 0.5rem;
+    min-height: 200px;
+    max-height: 200px;
+  }
+
+  .tools .box-container .box .content img {
+    max-height: 100px;
+  }
+
+  .tools .box-container .box .content h3 {
+    font-size: 1.2rem;
+    color : var(--secondary-color)
+  }
+
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+}
